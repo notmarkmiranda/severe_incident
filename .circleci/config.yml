@@ -11,7 +11,7 @@ jobs:
         environment:
           RAILS_ENV: test
           PGHOST: 127.0.0.1
-          DATABASE_URL: postgres://myapp-user@127.0.0.1/myapp-test
+          DATABASE_URL: postgres://severe_incident@127.0.0.1/myapp-test
 
 
       # Specify service dependencies here if necessary
