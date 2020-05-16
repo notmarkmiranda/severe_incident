@@ -2,4 +2,4 @@
 
 This is a rails project called severe repo.
 
-It is not deployed just yet. 
+It is deployed here: https://severe-incident.herokuapp.com
