@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-brand {
+  font-size: 36px;
+
+  & > span {
+    font-weight: bold;
+  }
+}
+
+.navbar-buttons > a {
+  margin-bottom: 0px;
+}
