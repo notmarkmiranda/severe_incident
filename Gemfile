@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+gem 'ten_years_rails'
 
 group :development, :test do
   gem 'factory_bot_rails'

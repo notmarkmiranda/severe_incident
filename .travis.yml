@@ -1,0 +1,35 @@
+language: ruby
+rvm:
+- 2.6.4
+env:
+  matrix:
+  - DB=postgresql
+addons:
+  chrome: stable
+  apt:
+    packages:
+    - chromium-chromedriver
+before_script:
+- cp config/database.travis.yml config/database.yml
+- psql -c 'create database travis_ci_test;' -U postgres
+- RAILS_ENV=test bundle exec rake db:create db:migrate --trace
+before_install:
+- wget https://github.com/mozilla/geckodriver/releases/download/v0.11.1/geckodriver-v0.11.1-linux64.tar.gz
+- mkdir geckodriver
+- tar -xzf geckodriver-v0.11.1-linux64.tar.gz -C geckodriver
+- export PATH=$PATH:$PWD/geckodriver
+cache:
+  bundler: true
+  directories:
+  - node_modules
+  yarn: true
+services:
+- postgresql
+install:
+- bundle install
+- nvm install node
+- node -v
+- npm i -g yarn
+- yarn
+script:
+- bundle exec rails spec
