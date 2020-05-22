@@ -1,0 +1,17 @@
+.center-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.small {
+  color: lightgray !important;
+}
+
+.devise-link {
+  text-decoration: none;
+
+  &:hover {
+    color: black;
+  }
+}
