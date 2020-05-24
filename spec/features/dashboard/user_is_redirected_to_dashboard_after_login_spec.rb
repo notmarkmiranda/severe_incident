@@ -1,8 +1,8 @@
-require 'rails_helper'
+require "rails_helper"
 
-describe 'User is redirected to dashboard after login', type: :feature do
+describe "User is redirected to dashboard after login", type: :feature do
   let(:user) { create(:user) }
-  
+
   it "redirects to dashboard and has a user's email" do
     visit new_user_session_path
     fill_in "Email", with: user.email
