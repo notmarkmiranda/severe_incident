@@ -32,4 +32,5 @@ install:
 - npm i -g yarn
 - yarn
 script:
+- bundle exec standardrb
 - bundle exec rails spec
