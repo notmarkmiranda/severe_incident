@@ -3,7 +3,7 @@ require "rails_helper"
 describe "NavBar has correct buttons based on user state", type: :feature do
   it "shows a Log out button for a logged-in user" do
     feature_spec_login
-    
+
     visit root_path
 
     expect(page).to have_link("Log out")

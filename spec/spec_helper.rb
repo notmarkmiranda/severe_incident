@@ -93,7 +93,8 @@ RSpec.configure do |config|
   #   Kernel.srand config.seed
 end
 
-def feature_spec_login(user=nil)
-  user = user || create(:user)
+def feature_spec_login(user = nil)
+  # Unsure if this works the same as user = user || create(:user)
+  user ||= create(:user)
   allow_any_instance_of(ApplicationController).to receive(:current_user).and_return(user)
 end
