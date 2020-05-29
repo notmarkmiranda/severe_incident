@@ -16,6 +16,7 @@ gem "draper"
 gem "skeleton-rails", git: "https://github.com/helios-technologies/skeleton-rails"
 
 group :development, :test do
+  gem "coveralls", require: false
   gem "factory_bot_rails"
   gem "pry"
   gem "rspec-rails", "~> 4.0.0"
